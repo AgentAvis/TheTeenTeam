@@ -31,7 +31,7 @@ hsp = 0
 
 //tweakables
 Speed = 2
-JumpSpeed = 7
+JumpSpeed = 3.15
 
 image_speed = 0.2
 </string>

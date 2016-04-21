@@ -27,10 +27,11 @@
             <kind>1</kind>
             <string>//init
 global.debug = false
+global.time = 1
 
 //tweakables
-global.Grav = 0.6
-global.time = 1
+global.Grav = 0.15
+
 </string>
           </argument>
         </arguments>
