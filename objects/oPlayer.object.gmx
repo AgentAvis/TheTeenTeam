@@ -31,7 +31,7 @@ hsp = 0
 
 //tweakables
 Speed = 2
-JumpSpeed = 7
+JumpSpeed = 6
 
 image_speed = 0.2
 </string>
@@ -62,11 +62,21 @@ left = keyboard_check(ord('A')) + keyboard_check(vk_left)
 right = keyboard_check(ord('D')) + keyboard_check(vk_right)
 
 //vert collision
-if place_meeting(x,y + vsp ,oSolid) { vsp = 0 } else { vsp += global.Grav }
+if place_meeting(x,y + 1 ,oSolid) 
+{ 
+vsp = 0 
+} 
+else 
+{ 
+vsp += global.Grav 
+}
 
 //jumping
 
-if up and place_meeting(x,y + 3,oSolid) { vsp = -JumpSpeed }
+if up and place_meeting(x,y + 2,oSolid) 
+{ 
+vsp = -JumpSpeed 
+}
 
 //walking and horisontal collision COLLISION NEEDS WORK I GOT IT
 
@@ -75,7 +85,7 @@ hsp = 0
 if right 
 {
 
-    if !place_meeting( x + Speed,y - 2 ,oSolid ) 
+    if !place_meeting( x + Speed,y - 1 ,oSolid ) 
     { 
     hsp = Speed 
     image_xscale = 1
@@ -84,7 +94,7 @@ if right
 
 if left 
 {
-    if !place_meeting( x - Speed,y - 2 ,oSolid ) 
+    if !place_meeting( x - Speed,y - 1 ,oSolid ) 
     { 
     hsp = -Speed
     image_xscale = -1
