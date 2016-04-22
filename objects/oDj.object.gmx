@@ -34,7 +34,7 @@ global.debug = false
 
 global.time = 1
 
-global.Grav = 0.15
+global.Grav = 0.2
 
 //BloodSurface
 surf = surface_create(room_width,room_height)

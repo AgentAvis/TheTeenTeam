@@ -32,9 +32,9 @@ hsp = 0
 //tweakables
 Speed = 2
 
-JumpSpeed = 6
+JumpSpeed = 4
 
-JumpSpeed = 3.15
+//JumpSpeed = 4
 
 
 image_speed = 0.2

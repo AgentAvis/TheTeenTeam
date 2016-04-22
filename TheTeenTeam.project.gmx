@@ -24,6 +24,7 @@
     <sprites name="Enemies">
       <sprites name="Slime">
         <sprite>sprites\spr_slime_moving</sprite>
+        <sprite>sprites\spr_slime_idle</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\sSlimeBar</sprite>
