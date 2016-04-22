@@ -66,7 +66,7 @@ left = keyboard_check(ord('A')) + keyboard_check(vk_left)
 right = keyboard_check(ord('D')) + keyboard_check(vk_right)
 
 //vert collision
-if place_meeting(x,y + 1 ,oSolid) 
+if place_meeting(x,y + vsp ,oSolid) 
 { 
 vsp = 0 
 } 
@@ -82,37 +82,70 @@ if up and place_meeting(x,y + 2,oSolid)
 vsp = -JumpSpeed 
 }
 
+//autojump when you land on something
+Stomp = collision_rectangle(x-5,y+7,x+3,y+10,oStompable,true,true)
+if instance_exists(Stomp)
+{
+with (Stomp) { HP -= 1 }
+vsp = -JumpSpeed 
+}
+
 //walking and horisontal collision COLLISION NEEDS WORK I GOT IT
 
-hsp = 0
 
 if right 
 {
 
     if !place_meeting( x + Speed,y - 1 ,oSolid ) 
     { 
-    hsp = Speed 
+    if hsp &lt; Speed { hsp += Speed * .2 } 
     image_xscale = 1
-    }
+    } else { hsp = 0 }
 }
 
 if left 
 {
     if !place_meeting( x - Speed,y - 1 ,oSolid ) 
     { 
-    hsp = -Speed
+    if hsp &gt; -Speed { hsp -= Speed * .2 }
     image_xscale = -1
-    }
+    } else { hsp = 0 }
 }
 
-// HEY BEN use this for animation
-if hsp != 0 and vsp == 0 //and sprite_index != spr_player_death
+if !right and !left
 {
-    sprite_index = spr_player_run
+    //drag
+    if place_meeting(x,y+2,oSolid){
+        //if i'm touching the floor slow me down by this number -1
+        //ex:( if you input .75 you will slow down by 25% room_speed (60) times a second )
+        hsp = hsp * .6
+    }
+    else {
+        hsp = hsp * .95
+    }
+    
+    //i have to do collision here too to fix shit so :/
+    if place_meeting(x - Speed,y - 1,oSolid) {
+        hsp = 0 x += 1
+    }
+    if place_meeting(x + Speed,y - 1,oSolid) {
+        hsp = 0 x -= 1
+    }
+    
 }
-if hsp = 0 and vsp == 0 //and sprite_index != spr_player_death
+
+//animation stuff
+if hsp &gt; .2 or hsp &lt; -.2
 {
+    if vsp == 0 //and sprite_index != spr_player_death {
+    {
+        sprite_index = spr_player_run
+    }
+} else {
+    if vsp == 0 //and sprite_index != spr_player_death
+    {
     sprite_index = spr_player_idle
+    }
 }
 if vsp &lt; 0
 {
@@ -151,6 +184,20 @@ y += vsp * global.time
           <argument>
             <kind>1</kind>
             <string>draw_self()
+
+if global.debug {
+    
+    draw_set_colour(c_aqua);
+    //vv true center of player
+    draw_circle(x-1,y-1,2,true)
+    //Bounding box of player
+    draw_rectangle(x+3,y+4,x-5,y-6,true)
+    
+    draw_set_colour(c_orange);
+    //stomping on things mask
+    draw_rectangle(x-5,y+7,x+3,y+10,true)
+}
+
 </string>
           </argument>
         </arguments>

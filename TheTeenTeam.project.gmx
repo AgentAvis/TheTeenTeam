@@ -38,8 +38,9 @@
     <object>objects\oRoomWall</object>
     <object>objects\oPlatform_end</object>
     <object>objects\oPlatform_mid</object>
-    <object>objects\oBaloon</object>
     <objects name="Enemies">
+      <object>objects\oStompable</object>
+      <object>objects\oBaloon</object>
       <object>objects\temp_slime</object>
     </objects>
   </objects>
