@@ -26,6 +26,7 @@
         <sprite>sprites\spr_slime_moving</sprite>
       </sprites>
     </sprites>
+    <sprite>sprites\sSlimeBar</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_world_1</background>
@@ -44,6 +45,7 @@
       <object>objects\oBaloon</object>
       <object>objects\temp_slime</object>
     </objects>
+    <object>objects\oSlimeBar</object>
     <object>objects\oBlood</object>
   </objects>
   <rooms name="rooms">

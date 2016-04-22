@@ -99,7 +99,7 @@ move = true timerr = 0
 
 }
 //turn around
-if place_meeting(x+hsp,y-1,oSolid) or place_meeting(x+hsp,y-1,oStompable) { hsp = -hsp dir = -dir }
+if place_meeting(x+hsp,y-1,oSolid) or place_meeting(x+hsp,y-1,oStompable) or place_meeting(x+hsp,y-1,oSlimeBar) { hsp = -hsp dir = -dir }
 
 
 
@@ -110,14 +110,15 @@ if place_meeting(x+hsp,y-1,oSolid) or place_meeting(x+hsp,y-1,oStompable) { hsp 
 
 //death and shit
 if HP &lt;= 0 {
-    repeat(100) {
+    repeat(150) {
         with (instance_create(x,y,oBlood)) {
             dir = random(360)
             spd = random(10)
             hsp = lengthdir_x(spd,dir)
             vsp = lengthdir_y(spd,dir)
-            image_blend = c_green
-            image_alpha = random_range(.1,.6)
+            image_blend = make_colour_rgb(106,random_range(151,230),79) //181
+            image_alpha = random_range(.6,1.5)
+            if image_alpha &gt; 1 { image_alpha = 1 }
         }
     }
     instance_destroy()
