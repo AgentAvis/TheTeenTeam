@@ -27,16 +27,16 @@
             <kind>1</kind>
             <string>//init
 global.debug = false
-global.time = 1
+
 
 //tweakables
-<<<<<<< HEAD
-global.Grav = 0.4
+
+
 global.time = 1
-=======
+
 global.Grav = 0.15
 
->>>>>>> origin/master
+
 </string>
           </argument>
         </arguments>

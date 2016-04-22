@@ -31,11 +31,11 @@ hsp = 0
 
 //tweakables
 Speed = 2
-<<<<<<< HEAD
+
 JumpSpeed = 6
-=======
+
 JumpSpeed = 3.15
->>>>>>> origin/master
+
 
 image_speed = 0.2
 </string>
