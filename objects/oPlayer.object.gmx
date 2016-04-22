@@ -68,26 +68,26 @@ right = keyboard_check(ord('D')) + keyboard_check(vk_right)
 //vert collision
 if place_meeting(x,y + vsp ,oSolid) 
 { 
-vsp = 0 
+    vsp = 0 
 } 
 else 
 { 
-vsp += global.Grav 
+    vsp += global.Grav 
 }
 
 //jumping
 
 if up and place_meeting(x,y + 2,oSolid) 
 { 
-vsp = -JumpSpeed 
+    vsp = -JumpSpeed 
 }
 
 //autojump when you land on something
-Stomp = collision_rectangle(x-5,y+7,x+3,y+10,oStompable,true,true)
+Stomp = collision_rectangle(x-5,y+1,x+3,y+5,oStompable,true,true)
 if instance_exists(Stomp)
 {
-with (Stomp) { HP -= 1 }
-vsp = -JumpSpeed 
+    with (Stomp) { HP -= 1 }
+    vsp = -JumpSpeed 
 }
 
 //walking and horisontal collision COLLISION NEEDS WORK I GOT IT
@@ -195,7 +195,7 @@ if global.debug {
     
     draw_set_colour(c_orange);
     //stomping on things mask
-    draw_rectangle(x-5,y+7,x+3,y+10,true)
+    draw_rectangle(x-5,y+1,x+3,y+5,true)
 }
 
 </string>
