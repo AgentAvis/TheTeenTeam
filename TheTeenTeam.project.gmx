@@ -13,6 +13,7 @@
     <sprite>sprites\spr_platform_end</sprite>
     <sprite>sprites\spr_platform_middle</sprite>
     <sprite>sprites\spr_baloon</sprite>
+    <sprite>sprites\sBlood</sprite>
     <sprites name="Player">
       <sprite>sprites\spr_player_run</sprite>
       <sprite>sprites\spr_player_idle</sprite>
@@ -43,6 +44,7 @@
       <object>objects\oBaloon</object>
       <object>objects\temp_slime</object>
     </objects>
+    <object>objects\oBlood</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rInit</room>
