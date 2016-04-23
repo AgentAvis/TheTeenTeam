@@ -6,14 +6,9 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sWall</sprite>
     <sprites name="Side Art">
       <sprite>sprites\spr_set1</sprite>
     </sprites>
-    <sprite>sprites\spr_platform_end</sprite>
-    <sprite>sprites\spr_platform_middle</sprite>
-    <sprite>sprites\spr_baloon</sprite>
-    <sprite>sprites\sBlood</sprite>
     <sprites name="Player">
       <sprite>sprites\spr_player_run</sprite>
       <sprite>sprites\spr_player_idle</sprite>
@@ -22,42 +17,65 @@
       <sprite>sprites\sprPlayer_Mask</sprite>
     </sprites>
     <sprites name="Enemies">
+      <sprite>sprites\spr_baloon</sprite>
       <sprites name="Slime">
         <sprite>sprites\spr_slime_moving</sprite>
         <sprite>sprites\spr_slime_idle</sprite>
       </sprites>
     </sprites>
-    <sprite>sprites\sSlimeBar</sprite>
-    <sprite>sprites\sSpikes</sprite>
+    <sprites name="World">
+      <sprite>sprites\sButton</sprite>
+      <sprite>sprites\sSpikes</sprite>
+      <sprite>sprites\sDoor</sprite>
+      <sprite>sprites\sWall</sprite>
+      <sprite>sprites\spr_platform_middle</sprite>
+      <sprite>sprites\spr_platform_end</sprite>
+    </sprites>
+    <sprites name="Sprites you shouldnt be seeing">
+      <sprite>sprites\sSlimeBar</sprite>
+      <sprite>sprites\sBlood</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_world_1</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\motion_set_cus.gml</script>
     <script>scripts\motion_add_cus.gml</script>
+    <script>scripts\ScClear.gml</script>
+    <script>scripts\ScTime.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\oPlayer</object>
-    <object>objects\oSolid</object>
-    <object>objects\oWall</object>
-    <object>objects\oDj</object>
-    <object>objects\oRoomWall</object>
-    <object>objects\oPlatform_end</object>
-    <object>objects\oPlatform_mid</object>
+    <objects name="LevelRelated">
+      <object>objects\oButton</object>
+      <object>objects\oDoor</object>
+      <object>objects\oSpikes</object>
+      <object>objects\oPlatform_end</object>
+      <object>objects\oWall</object>
+      <object>objects\oPlatform_mid</object>
+      <object>objects\oRoomWall</object>
+      <object>objects\oSlimeBar</object>
+      <object>objects\oPlayer</object>
+    </objects>
+    <objects name="CodeRelatedObjects">
+      <object>objects\oSolid</object>
+      <object>objects\oBlood</object>
+      <object>objects\oSplats</object>
+      <object>objects\oDj</object>
+    </objects>
     <objects name="Enemies">
       <object>objects\oStompable</object>
       <object>objects\oBaloon</object>
       <object>objects\oSlime</object>
     </objects>
-    <object>objects\oSlimeBar</object>
-    <object>objects\oBlood</object>
-    <object>objects\oSpikes</object>
-    <object>objects\oSplats</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rInit</room>
     <room>rooms\rTest</room>
+    <room>rooms\room3</room>
+    <room>rooms\room5</room>
+    <room>rooms\rTEMPtemplate</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

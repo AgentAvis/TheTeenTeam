@@ -64,13 +64,13 @@ surf = surface_create(room_width,room_height)
             <kind>1</kind>
             <string>if room = rInit { room_goto_next() }
 
-if keyboard_check_pressed(ord('R')) { room_restart() Sw = true }
+if keyboard_check_pressed(ord('R')) { room_restart() ScClear() Sw = true }
  
 if keyboard_check_pressed(ord('K')) { global.debug = !global.debug }
 
-if keyboard_check_pressed(ord('P')) { if room_exists(room_next(room)) room_goto_next(); Sw = true }
+if keyboard_check_pressed(ord('P')) { if room_exists(room_next(room)) {ScClear() room_goto_next()} Sw = true }
 
-if keyboard_check_pressed(ord('O')) { if room_exists(room_previous(room)) room_goto_previous(); Sw = true }
+if keyboard_check_pressed(ord('O')) { if room_exists(room_previous(room)) {ScClear() room_goto_previous()} Sw = true }
 
 if keyboard_check_pressed(ord('C')) {
 

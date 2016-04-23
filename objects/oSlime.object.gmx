@@ -42,6 +42,8 @@ move = false
 hsp = 0
 vsp = 0
 anim = false
+App = false
+app = 0
 </string>
           </argument>
         </arguments>
@@ -64,7 +66,9 @@ anim = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//face the right way
+            <string>ScTime()
+
+//face the right way
 image_xscale = dir
 
 
@@ -78,7 +82,7 @@ anim = true
 else 
 {
 //drag
-hsp = hsp * .85
+if App { hsp = hsp * .85 }
 }
 
 if move = false 
