@@ -33,8 +33,8 @@ app = 0
 
 //tweakables
 Speed = 2
-
 JumpSpeed = 4
+HP = 1
 
 //JumpSpeed = 4
 
@@ -71,7 +71,7 @@ up = keyboard_check_pressed(ord('W')) + keyboard_check_pressed(vk_space) + keybo
 left = keyboard_check(ord('A')) + keyboard_check(vk_left)
 right = keyboard_check(ord('D')) + keyboard_check(vk_right)
 
-/*
+
 //vomiting
 if mouse_check_button(mb_left) and App {
 
@@ -79,20 +79,22 @@ if mouse_check_button(mb_left) and App {
 motion_add_cus(global.Grav * .75,point_direction(x,y,mouse_x,mouse_y)+180)
 
 
-repeat(ceil(random_range(7,24))) {
+repeat(ceil(random_range(2,7))) {
         with (instance_create(x,y,oBlood)) {
-            dir = point_direction(x,y,mouse_x,mouse_y) + random_range(-5,5)
-            spd = random_range(8,14)
+            dir = point_direction(x,y,mouse_x,mouse_y) + random_range(-3,3)
+            spd = random_range(4,6)
             hsp = lengthdir_x(spd,dir)
             vsp = lengthdir_y(spd,dir)
-            image_blend = make_colour_rgb(106,random_range(151,230),79) //181
+            
+            image_blend = make_colour_rgb(random_range(90,120),random_range(151,255),79) //181
+            
             image_alpha = random_range(.6,1.5)
             if image_alpha &gt; 1 { image_alpha = 1 }
         }
     }
 
 }
-*/
+
 
 //vert collision
 if place_meeting(x,y + vsp ,oSolid) 
@@ -183,6 +185,26 @@ if vsp &lt; 0
 if vsp &gt; 0 
 {
     sprite_index = spr_player_down
+}
+
+//health stuff
+
+if place_meeting(x,y,oSpikes) and vsp &gt; 0 { HP -= 1 }
+
+if HP &lt;= 0 {
+    repeat(150) {
+        with (instance_create(x,y,oBlood)) {
+            s = true
+            dir = random(360)
+            spd = random(5)
+            hsp = lengthdir_x(spd,dir)
+            vsp = lengthdir_y(spd,dir)
+            image_blend = make_colour_rgb(random_range(151,255),80,79) //181
+            image_alpha = random_range(.6,1.5)
+            if image_alpha &gt; 1 { image_alpha = 1 }
+        }
+    }
+    instance_destroy()
 }
 
 //Apply speeds and such

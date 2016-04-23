@@ -114,6 +114,7 @@ if place_meeting(x+hsp,y-1,oSolid) or place_meeting(x+hsp,y-1,oStompable) or pla
 if HP &lt;= 0 {
     repeat(150) {
         with (instance_create(x,y,oBlood)) {
+            s = true
             dir = random(360)
             spd = random(5)
             hsp = lengthdir_x(spd,dir)

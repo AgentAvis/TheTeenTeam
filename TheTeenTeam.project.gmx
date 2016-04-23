@@ -28,6 +28,7 @@
       </sprites>
     </sprites>
     <sprite>sprites\sSlimeBar</sprite>
+    <sprite>sprites\sSpikes</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_world_1</background>
@@ -51,6 +52,7 @@
     </objects>
     <object>objects\oSlimeBar</object>
     <object>objects\oBlood</object>
+    <object>objects\oSpikes</object>
     <object>objects\oSplats</object>
   </objects>
   <rooms name="rooms">

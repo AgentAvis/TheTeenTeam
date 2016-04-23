@@ -28,6 +28,7 @@
             <string>die = false
 App = false
 app = 0
+s = false
 </string>
           </argument>
         </arguments>
@@ -56,7 +57,7 @@ if app &gt;= 1 { App = true app = 0 } else { App = false }
 if App {vsp += global.Grav}
 
 if place_meeting(x,y,oSolid) { image_alpha = 1 hsp = 0 vsp = 0 die = true }
-if random(10) &lt;= 3 { image_alpha = image_alpha * .6 hsp = 0 vsp = 0 die = true }
+if s and App { if random(10) &lt;= 3 { image_alpha = image_alpha * .6 hsp = 0 vsp = 0 die = true } }
 
 x += hsp * global.time
 y += vsp * global.time
