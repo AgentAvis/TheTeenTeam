@@ -44,7 +44,7 @@
     <objects name="Enemies">
       <object>objects\oStompable</object>
       <object>objects\oBaloon</object>
-      <object>objects\temp_slime</object>
+      <object>objects\oSlime</object>
     </objects>
     <object>objects\oSlimeBar</object>
     <object>objects\oBlood</object>
