@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>497</xoffset>
-    <yoffset>401</yoffset>
+    <xoffset>127</xoffset>
+    <yoffset>221</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="-1" foreground="0" name="bg_world_1" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -56,7 +56,7 @@
     <instance objName="oWall" x="64" y="0" name="inst_E5C8729D" locked="0" code="" scaleX="0.5" scaleY="11.5" colour="4294967295" rotation="0"/>
     <instance objName="oWall" x="184" y="0" name="inst_708CFB8B" locked="0" code="" scaleX="0.5" scaleY="11.7333335876465" colour="4294967295" rotation="0"/>
     <instance objName="oBaloon" x="97" y="155" name="inst_EE72BAF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="temp_slime" x="165" y="124" name="inst_84156188" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="temp_slime" x="174" y="124" name="inst_84156188" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="72" y="176" name="inst_C5829FD2" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_end" x="96" y="176" name="inst_993B0380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="152" y="128" name="inst_BC4EEF75" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
@@ -68,13 +68,16 @@
     <instance objName="oPlatform_mid" x="80" y="80" name="inst_AA6AD963" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="88" y="80" name="inst_4353554E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_end" x="96" y="80" name="inst_C0BF9508" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oBaloon" x="149" y="78" name="inst_DA63A595" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_end" x="120" y="128" name="inst_D05B492C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_end" x="152" y="128" name="inst_8AF503DF" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="temp_slime" x="112" y="124" name="inst_156880D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="temp_slime" x="120" y="124" name="inst_156880D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSlimeBar" x="128" y="120" name="inst_E9570399" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSlimeBar" x="88" y="120" name="inst_4239C170" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSlimeBar" x="136" y="120" name="inst_8502692F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="temp_slime" x="157" y="124" name="inst_5C3A05C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="temp_slime" x="105" y="124" name="inst_27854491" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oWall" x="64" y="-16" name="inst_0A6C29F0" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oWall" x="64" y="184" name="inst_8A6C5C9F" locked="0" code="" scaleX="8" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

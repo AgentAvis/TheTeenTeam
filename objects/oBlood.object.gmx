@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>die = false
+App = false
+app = 0
 </string>
           </argument>
         </arguments>
@@ -48,12 +50,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vsp += global.Grav
+            <string>app += global.time 
+if app &gt;= 1 { App = true app = 0 } else { App = false }
 
-if place_meeting(x,y,oSolid) { hsp = 0 vsp = 0 die = true }
+if App {vsp += global.Grav}
 
-x += hsp
-y += vsp
+if place_meeting(x,y,oSolid) { image_alpha = 1 hsp = 0 vsp = 0 die = true }
+if random(10) &lt;= 3 { image_alpha = image_alpha * .6 hsp = 0 vsp = 0 die = true }
+
+x += hsp * global.time
+y += vsp * global.time
 
 if die {
     if (instance_exists(oDj)) {
@@ -67,6 +73,12 @@ if die {
     instance_destroy()              
 }
 
+surface_set_target(oSplats.party);
+draw_set_alpha(image_alpha);
+draw_set_colour(image_blend);
+draw_circle(x - 1,y - 1,1.5,false)
+draw_set_alpha(1);
+surface_reset_target(); 
 </string>
           </argument>
         </arguments>
@@ -92,7 +104,9 @@ if die {
             <string>draw_set_alpha(image_alpha);
 draw_set_color(image_blend);
 
-draw_circle(x - 1,y - 1,1.5,false)
+//draw_circle(x - 1,y - 1,1.5,false)
+
+
 //draw_self()
 
 draw_set_alpha(1)

@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-100</depth>
+  <depth>-30</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -38,6 +38,7 @@ global.Grav = 0.2
 
 //BloodSurface
 surf = surface_create(room_width,room_height)
+
 </string>
           </argument>
         </arguments>
@@ -69,6 +70,18 @@ if keyboard_check_pressed(ord('K')) { global.debug = !global.debug }
 if keyboard_check_pressed(ord('P')) { if room_exists(room_next(room)) room_goto_next();  }
 
 if keyboard_check_pressed(ord('O')) { if room_exists(room_previous(room)) room_goto_previous();  }
+
+if keyboard_check_pressed(ord('C')) {
+
+surface_set_target(surf);
+draw_clear_alpha(c_white,0);
+surface_reset_target();   
+
+}
+
+if keyboard_check_pressed(ord('U')) { global.time = get_integer("Set The default Time value",1) }
+
+
 </string>
           </argument>
         </arguments>
@@ -101,11 +114,17 @@ if global.debug
 }
 
 // Draw blood surface
+
 if (surface_exists(surf))
-    draw_surface(surf, 0, 0);
+{
+    draw_surface(surf, 0, 0)
+} else {
+
 // Create new surface if DX destroys old surface due to port resize
-else
-    surf = surface_create(room_width, room_height);
+
+surf = surface_create(room_width, room_height);
+
+}
 </string>
           </argument>
         </arguments>
