@@ -116,7 +116,7 @@ if HP &lt;= 0 {
 
 x += hsp * global.time
 y -= vsp * global.time
-<<<<<<< HEAD:objects/oSlime.object.gmx
+
 </string>
           </argument>
         </arguments>
@@ -144,8 +144,7 @@ y -= vsp * global.time
     image_index = 0
     sprite_index = spr_slime_idle
 }
-=======
->>>>>>> origin/master:objects/temp_slime.object.gmx
+
 </string>
           </argument>
         </arguments>

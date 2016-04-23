@@ -27,14 +27,15 @@
             <kind>1</kind>
             <string>//init
 global.debug = false
-
+Sw = true
+global.Controls = true
 
 //tweakables
 
 
 global.time = 1
 
-global.Grav = 0.4
+global.Grav = 0.15
 
 //BloodSurface
 surf = surface_create(room_width,room_height)
@@ -63,13 +64,13 @@ surf = surface_create(room_width,room_height)
             <kind>1</kind>
             <string>if room = rInit { room_goto_next() }
 
-if keyboard_check_pressed(ord('R')) { room_restart() }
+if keyboard_check_pressed(ord('R')) { room_restart() Sw = true }
  
 if keyboard_check_pressed(ord('K')) { global.debug = !global.debug }
 
-if keyboard_check_pressed(ord('P')) { if room_exists(room_next(room)) room_goto_next();  }
+if keyboard_check_pressed(ord('P')) { if room_exists(room_next(room)) room_goto_next(); Sw = true }
 
-if keyboard_check_pressed(ord('O')) { if room_exists(room_previous(room)) room_goto_previous();  }
+if keyboard_check_pressed(ord('O')) { if room_exists(room_previous(room)) room_goto_previous(); Sw = true }
 
 if keyboard_check_pressed(ord('C')) {
 
@@ -81,6 +82,19 @@ surface_reset_target();
 
 if keyboard_check_pressed(ord('U')) { global.time = get_integer("Set The default Time value",1) }
 
+
+if keyboard_check_pressed(ord('J')) { global.Controls = !global.Controls Sw = true }
+
+if Sw {
+    if global.Controls {
+        with (oPlayer) { Speed = 2 JumpSpeed = 5.5 }
+        global.Grav = .4
+    } else {
+        with (oPlayer) { Speed = 2 JumpSpeed = 4 }
+        global.Grav = .15
+    }
+    Sw = false
+}
 
 </string>
           </argument>
@@ -108,7 +122,7 @@ if keyboard_check_pressed(ord('U')) { global.time = get_integer("Set The default
 if global.debug
 {
 
-
+draw_text(room_width / 2,room_height / 2,string(global.Controls))
 
 
 }
