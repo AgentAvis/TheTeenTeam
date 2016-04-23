@@ -34,8 +34,13 @@ app = 0
 //tweakables
 Speed = 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 JumpSpeed = 5.5
+=======
+JumpSpeed = 4
+HP = 1
+>>>>>>> origin/master
 =======
 JumpSpeed = 4
 HP = 1
