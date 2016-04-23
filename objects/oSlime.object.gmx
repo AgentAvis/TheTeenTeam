@@ -3,7 +3,7 @@
   <spriteName>spr_slime_idle</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-31</depth>
   <persistent>0</persistent>
   <parentName>oStompable</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -99,8 +99,9 @@ if place_meeting(x+hsp,y-1,oSolid) or place_meeting(x+hsp,y-1,oStompable) or pla
 if HP &lt;= 0 {
     repeat(150) {
         with (instance_create(x,y,oBlood)) {
+            s = true
             dir = random(360)
-            spd = random(10)
+            spd = random(5)
             hsp = lengthdir_x(spd,dir)
             vsp = lengthdir_y(spd,dir)
             image_blend = make_colour_rgb(106,random_range(151,230),79) //181
@@ -113,8 +114,8 @@ if HP &lt;= 0 {
 
 //apply speeds
 
-x += hsp
-y -= vsp
+x += hsp * global.time
+y -= vsp * global.time
 </string>
           </argument>
         </arguments>

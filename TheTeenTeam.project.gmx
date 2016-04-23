@@ -28,11 +28,15 @@
       </sprites>
     </sprites>
     <sprite>sprites\sSlimeBar</sprite>
+    <sprite>sprites\sSpikes</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_world_1</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\motion_add_cus.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>
     <object>objects\oSolid</object>
@@ -48,6 +52,8 @@
     </objects>
     <object>objects\oSlimeBar</object>
     <object>objects\oBlood</object>
+    <object>objects\oSpikes</object>
+    <object>objects\oSplats</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rInit</room>

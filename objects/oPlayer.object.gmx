@@ -3,7 +3,7 @@
   <spriteName>spr_player_idle</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-40</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>sprPlayer_Mask</maskName>
@@ -28,11 +28,18 @@
             <string>//Init
 vsp = 0
 hsp = 0
+App = false
+app = 0
 
 //tweakables
 Speed = 2
+<<<<<<< HEAD
 
 JumpSpeed = 5.5
+=======
+JumpSpeed = 4
+HP = 1
+>>>>>>> origin/master
 
 //JumpSpeed = 4
 
@@ -60,10 +67,39 @@ image_speed = 0.2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//inputs
+            <string>//time stuff
+app += global.time 
+if app &gt;= 1 { App = true app = 0 } else { App = false }
+
+//inputs
 up = keyboard_check_pressed(ord('W')) + keyboard_check_pressed(vk_space) + keyboard_check_pressed(vk_up)
 left = keyboard_check(ord('A')) + keyboard_check(vk_left)
 right = keyboard_check(ord('D')) + keyboard_check(vk_right)
+
+
+//vomiting
+if mouse_check_button(mb_left) and App {
+
+//knockback yo
+motion_add_cus(global.Grav * .75,point_direction(x,y,mouse_x,mouse_y)+180)
+
+
+repeat(ceil(random_range(2,7))) {
+        with (instance_create(x,y,oBlood)) {
+            dir = point_direction(x,y,mouse_x,mouse_y) + random_range(-3,3)
+            spd = random_range(4,6)
+            hsp = lengthdir_x(spd,dir)
+            vsp = lengthdir_y(spd,dir)
+            
+            image_blend = make_colour_rgb(random_range(90,120),random_range(151,255),79) //181
+            
+            image_alpha = random_range(.6,1.5)
+            if image_alpha &gt; 1 { image_alpha = 1 }
+        }
+    }
+
+}
+
 
 //vert collision
 if place_meeting(x,y + vsp ,oSolid) 
@@ -72,7 +108,7 @@ if place_meeting(x,y + vsp ,oSolid)
 } 
 else 
 { 
-    vsp += global.Grav 
+    if App { vsp += global.Grav } 
 }
 
 //jumping
@@ -84,7 +120,7 @@ if up and place_meeting(x,y + 2,oSolid)
 
 //autojump when you land on something
 Stomp = collision_rectangle(x-5,y+1,x+3,y+5,oStompable,true,true)
-if instance_exists(Stomp)
+if instance_exists(Stomp) and vsp &gt; 0
 {
     with (Stomp) { HP -= 1 }
     vsp = -JumpSpeed 
@@ -154,6 +190,26 @@ if vsp &lt; 0
 if vsp &gt; 0 
 {
     sprite_index = spr_player_down
+}
+
+//health stuff
+
+if place_meeting(x,y,oSpikes) and vsp &gt; 0 { HP -= 1 }
+
+if HP &lt;= 0 {
+    repeat(150) {
+        with (instance_create(x,y,oBlood)) {
+            s = true
+            dir = random(360)
+            spd = random(5)
+            hsp = lengthdir_x(spd,dir)
+            vsp = lengthdir_y(spd,dir)
+            image_blend = make_colour_rgb(random_range(151,255),80,79) //181
+            image_alpha = random_range(.6,1.5)
+            if image_alpha &gt; 1 { image_alpha = 1 }
+        }
+    }
+    instance_destroy()
 }
 
 //Apply speeds and such
