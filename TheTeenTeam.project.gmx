@@ -42,12 +42,14 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\get_direction.gml</script>
     <script>scripts\motion_set_cus.gml</script>
     <script>scripts\motion_add_cus.gml</script>
     <script>scripts\ScClear.gml</script>
     <script>scripts\ScTime.gml</script>
     <script>scripts\ScRoot.gml</script>
     <script>scripts\MachineCreate.gml</script>
+    <script>scripts\get_speed.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\oPlayer</object>

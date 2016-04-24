@@ -56,16 +56,30 @@ if app &gt;= 1 { App = true app = 0 } else { App = false }
 
 if App {vsp += .15}
 
-if place_meeting(x,y,oSolid) {
-    if !s and random(2) &gt; 1 {
-        s = true
-        vsp = -vsp
-        vsp = vsp * .75
-        hsp += random_range(-5,5)
-    } else { 
-        image_alpha = 1 hsp = 0 vsp = 0 die = true
-}
+Col = instance_place(x,y,oSolid)
 
+if instance_exists(Col) {
+    
+    switch (Col.object_index) {
+    
+    case oBlastDoor:
+        var spd, dir;
+        image_alpha = image_alpha / 2
+        s = true dir = get_direction()
+        spd = get_speed()
+        motion_set(dir + 180 + random_range(-20,20),spd)
+    ;break;
+    default:
+        if !s and random(2) &gt; 1 {
+            s = true
+            vsp = -vsp
+            vsp = vsp * .75
+            hsp += random_range(-5,5)
+        } else { 
+            image_alpha = 1 hsp = 0 vsp = 0 die = true
+        }
+    ;
+    }
 }
 if s and App { if random(10) &lt;= 4 { image_alpha = image_alpha * .6 hsp = 0 vsp = 0 die = true } }
 
