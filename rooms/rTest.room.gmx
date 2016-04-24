@@ -16,7 +16,7 @@
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
     <isSet>-1</isSet>
-    <w>936</w>
+    <w>960</w>
     <h>600</h>
     <showGrid>0</showGrid>
     <showObjects>-1</showObjects>
@@ -27,8 +27,8 @@
     <deleteUnderlyingObj>0</deleteUnderlyingObj>
     <deleteUnderlyingTiles>-1</deleteUnderlyingTiles>
     <page>0</page>
-    <xoffset>379</xoffset>
-    <yoffset>1578</yoffset>
+    <xoffset>776</xoffset>
+    <yoffset>2155</yoffset>
   </makerSettings>
   <backgrounds>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -41,17 +41,17 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="" xview="0" yview="0" wview="360" hview="240" xport="0" yport="0" wport="360" hport="240" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
-    <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="&lt;undefined&gt;" xview="0" yview="0" wview="360" hview="240" xport="0" yport="0" wport="360" hport="240" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="oPlayer" x="36" y="171" name="inst_73ABA7A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlayer" x="44" y="171" name="inst_73ABA7A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="0" y="232" name="inst_8319748A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="8" y="232" name="inst_A6499DEE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="16" y="232" name="inst_38E01773" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -188,7 +188,7 @@
     <instance objName="oSlime" x="279" y="52" name="inst_8DF1C635" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oDoor" x="293" y="40" name="inst_D9A1596C" locked="0" code="d = room3&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oWall" x="-16" y="160" name="inst_A8A672F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oButton" x="51" y="163" name="Button1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oButton" x="52" y="164" name="Button1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="56" y="176" name="inst_4EA6F331" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="64" y="176" name="inst_C98E20CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="72" y="176" name="inst_3FFFB0EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -196,9 +196,7 @@
     <instance objName="oPlatform_mid" x="88" y="176" name="inst_3EC39D50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="96" y="176" name="inst_5488FD65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="104" y="176" name="inst_A033E7EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="112" y="176" name="inst_F5E4E072" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="120" y="176" name="inst_74661675" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="128" y="176" name="inst_B068F6CD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="112" y="176" name="inst_F5E4E072" locked="0" code="" scaleX="3" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="136" y="176" name="inst_EBE08E7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="144" y="176" name="inst_FAFD736E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="152" y="176" name="inst_DB58F055" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -209,11 +207,7 @@
     <instance objName="oPlatform_mid" x="192" y="176" name="inst_9502FD3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="200" y="176" name="inst_AA3FF8FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="208" y="176" name="inst_270FC13B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSpikes" x="64" y="168" name="inst_C586F8AF" locked="0" code="p = Button1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSpikes" x="72" y="168" name="inst_D745E00B" locked="0" code="p = Button1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oSpikes" x="64" y="160" name="inst_9486C2F0" locked="0" code="p = Button1&#xA;" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="oSpikes" x="72" y="160" name="inst_1F622EA8" locked="0" code="p = Button1&#xA;" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
-    <instance objName="oWall" x="64" y="136" name="inst_53BE4F94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oWall" x="64" y="136" name="inst_53BE4F94" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
     <instance objName="oWall" x="64" y="120" name="inst_AF78CD52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="56" y="120" name="inst_9A4C5546" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="48" y="120" name="inst_4EA13B64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -223,17 +217,25 @@
     <instance objName="oPlatform_mid" x="16" y="120" name="inst_6BD8C32F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="8" y="120" name="inst_DDB9B126" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="0" y="120" name="inst_4EC56BD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="80" y="120" name="inst_3A26BF3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="88" y="120" name="inst_FA4C59E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="96" y="120" name="inst_82849BF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="104" y="120" name="inst_A5935FEB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="112" y="120" name="inst_78892AD6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="120" y="120" name="inst_4F88510C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="128" y="120" name="inst_E2FFD607" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="136" y="120" name="inst_81240A63" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oPlatform_mid" x="144" y="120" name="inst_8258E912" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="64" y="120" name="inst_7674AB4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oPlatform_mid" x="72" y="120" name="inst_2C89D0EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSpikes" x="86" y="168" name="inst_3E46C8B1" locked="0" code="p = Button2&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oSpikes" x="86" y="168" name="inst_FD5FA3BD" locked="0" code="p = Button2&#xA;" scaleX="1" scaleY="-1" colour="4294967295" rotation="0"/>
+    <instance objName="oBlastDoor" x="66" y="168" name="inst_99BA9255" locked="0" code="p = Button1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oBlastDoor" x="74" y="168" name="inst_58309C0A" locked="0" code="p = Button1&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="180"/>
+    <instance objName="oWall" x="80" y="136" name="inst_641A8DF5" locked="0" code="" scaleX="1" scaleY="1.5" colour="4294967295" rotation="0"/>
+    <instance objName="oWall" x="80" y="120" name="inst_4AF20120" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="80" y="120" name="inst_8F7BB327" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="88" y="120" name="inst_9DDCB547" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="96" y="120" name="inst_222A1A12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="104" y="120" name="inst_5710100D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="112" y="120" name="inst_E94531D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="120" y="120" name="inst_22A3E682" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="128" y="120" name="inst_F49164B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="152" y="120" name="inst_E01AFBB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="144" y="120" name="inst_4AF92FE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oPlatform_mid" x="136" y="120" name="inst_CE967C49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oButton" x="77" y="164" name="Button2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

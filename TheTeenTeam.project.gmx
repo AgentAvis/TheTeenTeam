@@ -35,6 +35,7 @@
       <sprite>sprites\sSlimeBar</sprite>
       <sprite>sprites\sBlood</sprite>
     </sprites>
+    <sprite>sprites\sBlastDoor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_world_1</background>
@@ -45,18 +46,21 @@
     <script>scripts\motion_add_cus.gml</script>
     <script>scripts\ScClear.gml</script>
     <script>scripts\ScTime.gml</script>
+    <script>scripts\ScRoot.gml</script>
+    <script>scripts\MachineCreate.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\oPlayer</object>
     <objects name="LevelRelated">
+      <object>objects\oSpikes</object>
+      <object>objects\oBlastDoor</object>
       <object>objects\oButton</object>
       <object>objects\oDoor</object>
-      <object>objects\oSpikes</object>
       <object>objects\oPlatform_end</object>
       <object>objects\oWall</object>
       <object>objects\oPlatform_mid</object>
       <object>objects\oRoomWall</object>
       <object>objects\oSlimeBar</object>
-      <object>objects\oPlayer</object>
     </objects>
     <objects name="CodeRelatedObjects">
       <object>objects\oSolid</object>
