@@ -235,7 +235,7 @@
     <instance objName="oSlime" x="128" y="196" name="inst_C543AEB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSlime" x="162" y="148" name="inst_50D1B8E5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="oSlime" x="279" y="52" name="inst_8DF1C635" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="oDoor" x="296" y="40" name="inst_17CB9AF6" locked="0" code="d = rTest&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="oDoor" x="300" y="44" name="inst_17CB9AF6" locked="0" code="d = rTest&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
