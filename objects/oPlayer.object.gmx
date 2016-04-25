@@ -25,14 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Init
-vsp = 0
-hsp = 0
-App = false
-app = 0
-
-
-//tweakables
+            <string>//tweakables
 if global.Controls {
         with (oPlayer) { Speed = 2 JumpSpeed = 5.5 }
         global.Grav = .4
@@ -41,361 +34,21 @@ if global.Controls {
         global.Grav = .15
     }
 HP = 2
-
+jumps = 20
 image_speed = 0.2
+
+//init
+ojumps = jumps
+vsp = 0
+hsp = 0
+App = false
+app = 0
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///backup
-/*
-ScTime()
-
-//inputs
-up = keyboard_check_pressed(ord('W')) + keyboard_check_pressed(vk_space) + keyboard_check_pressed(vk_up)
-left = keyboard_check(ord('A')) + keyboard_check(vk_left)
-right = keyboard_check(ord('D')) + keyboard_check(vk_right)
-
-
-//vomiting
-if mouse_check_button(mb_left) and App {
-    
-    //knockback yo
-    motion_add_cus(global.Grav * .75,point_direction(x,y,mouse_x,mouse_y)+180)
-    
-    
-    repeat(ceil(random_range(2,7))) {
-            with (instance_create(x,y,oBlood)) {
-                dir = point_direction(x,y,mouse_x,mouse_y) + random_range(-3,3)
-                spd = random_range(4,6)
-                hsp = lengthdir_x(spd,dir)
-                vsp = lengthdir_y(spd,dir)
-                
-                image_blend = make_colour_rgb(random_range(90,120),random_range(151,255),79) //181
-                
-                image_alpha = random_range(.6,1.5)
-                if image_alpha &gt; 1 { image_alpha = 1 }
-            }
-        }
-    
-}
-
-
-//vert collision
-if place_meeting(x,y + vsp ,oSolid) 
-{ 
-    vsp = 0 
-} 
-else 
-{ 
-    if App { vsp += global.Grav } 
-}
-
-//jumping
-
-if up and place_meeting(x,y + 2,oSolid) 
-{ 
-    vsp = -JumpSpeed 
-}
-
-//autojump when you land on something
-Stomp = collision_rectangle(x-5,y+1,x+3,y+5,oStompable,true,true)
-if instance_exists(Stomp) and vsp &gt; 0
-{
-    with (Stomp) { HP -= 1 }
-    vsp = -JumpSpeed 
-}
-
-//walking and horisontal collision COLLISION NEEDS WORK I GOT IT
-
-
-if right 
-{
-
-    if !place_meeting( x + hsp,y - 1 ,oSolid ) 
-    { 
-    if hsp &lt; Speed { hsp += Speed * .2 } 
-    image_xscale = 1
-    } else { x -= hsp hsp = 0 }
-}
-
-if left 
-{
-    if !place_meeting( x - hsp,y - 1 ,oSolid ) 
-    { 
-    if hsp &gt; -Speed {  hsp -= Speed * .2 }
-    image_xscale = -1
-    } else {x += hsp hsp = 0 }
-}
-
-if !right and !left
-{
-    //drag
-    if place_meeting(x,y+2,oSolid){
-        //if i'm touching the floor slow me down by this number -1
-        //ex:( if you input .75 you will slow down by 25% room_speed (60) times a second )
-        hsp = hsp * .78
-    }
-    else {
-        hsp = hsp * .95
-    }
-    
-    //i have to do collision here too to fix shit so :/
-    if place_meeting(x - Speed,y - 1,oSolid) {
-        hsp = 0 x += 1
-    }
-    if place_meeting(x + Speed,y - 1,oSolid) {
-        hsp = 0 x -= 1
-    }
-    
-}
-
-//animation stuff
-if hsp &gt; .2 or hsp &lt; -.2
-{
-    if vsp == 0 //and sprite_index != spr_player_death {
-    {
-        sprite_index = spr_player_run
-    }
-} else {
-    if vsp == 0 //and sprite_index != spr_player_death
-    {
-    sprite_index = spr_player_idle
-    }
-}
-if vsp &lt; 0
-{
-    sprite_index = spr_player_up
-}
-if vsp &gt; 0 
-{
-    sprite_index = spr_player_down
-}
-
-//health stuff
-
-if place_meeting(x,y,oSpikes) and vsp &gt; 0 { HP -= 1 }
-
-if HP &lt;= 0 {
-    repeat(200) {
-        with (instance_create(x,y,oBlood)) {
-            s = true
-            dir = random(360)
-            spd = random(5)
-            hsp = lengthdir_x(spd,dir)
-            vsp = lengthdir_y(spd,dir)
-            image_blend = make_colour_rgb(random_range(151,255),80,79) //181
-            image_alpha = random_range(.6,1.5)
-            if image_alpha &gt; 1 { image_alpha = 1 }
-        }
-    }
-    instance_destroy()
-}
-//terminal velocitys
-if abs(hsp) &gt; 5 { hsp = 5 * sign(hsp) }
-if abs(vsp) &gt; 10 { vsp = 10 * sign(vsp) }
-
-//Apply speeds and such
-
-x += hsp * global.time
-y += vsp * global.time
- 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///trash
-/*
-ScTime()
-
-//inputs
-up = keyboard_check_pressed(ord('W')) + keyboard_check_pressed(vk_space) + keyboard_check_pressed(vk_up)
-left = keyboard_check(ord('A')) + keyboard_check(vk_left)
-right = keyboard_check(ord('D')) + keyboard_check(vk_right)
-
-
-//vomiting
-if mouse_check_button(mb_left) and App {
-    
-    //knockback yo
-    motion_add_cus(global.Grav * .75,point_direction(x,y,mouse_x,mouse_y)+180)
-    
-    
-    repeat(ceil(random_range(2,7))) {
-            with (instance_create(x,y,oBlood)) {
-                dir = point_direction(x,y,mouse_x,mouse_y) + random_range(-3,3)
-                spd = random_range(4,6)
-                hsp = lengthdir_x(spd,dir)
-                vsp = lengthdir_y(spd,dir)
-                
-                image_blend = make_colour_rgb(random_range(90,120),random_range(151,255),79) //181
-                
-                image_alpha = random_range(.6,1.5)
-                if image_alpha &gt; 1 { image_alpha = 1 }
-            }
-        }
-    
-}
-
-//jumping
-
-if up and place_meeting(x,y + 2,oSolid) 
-{ 
-    vsp = -JumpSpeed 
-}
-
-//autojump when you land on something
-Stomp = collision_rectangle(x-5,y+1,x+3,y+5,oStompable,true,true)
-if instance_exists(Stomp) and vsp &gt; 0
-{
-    with (Stomp) { HP -= 1 }
-    vsp = -JumpSpeed 
-}
-
-if App { //this makes sure everything works the same even if time is slowed
-    //Gravity yo
-    vsp += global.Grav
-    
-    //Walking and shit
-    if !(right and left) {
-        if right { if hsp &lt; Speed { hsp += Speed * .2 } }
-        if left { if hsp &gt; -Speed { hsp -= Speed * .2 } }
-    }
-    
-    //drag
-    if !left and !right {
-        if place_meeting(x,y+2,oSolid) {
-            hsp = hsp * .6
-        } else {
-            hsp = hsp *.95
-        }
-    }
-}
-
-//terminal velocity(s)  (These prevent things from getting too crazy)
-if abs(hsp) &gt; 4 { hsp = sign(hsp) * 4 }
-if abs(vsp) &gt; 6 { vsp = sign(vsp) * 6 }
-
-
-//DO NOT MODIFY SPEED BELOW THIS LINE!! DO NOT MODIFY SPEED BELOW THIS LINE!! DO NOT MODIFY SPEED BELOW THIS LINE!! DO NOT MODIFY SPEED BELOW THIS LINE!!
-//DO NOT MODIFY SPEED BELOW THIS LINE!! DO NOT MODIFY SPEED BELOW THIS LINE!! DO NOT MODIFY SPEED BELOW THIS LINE!! DO NOT MODIFY SPEED BELOW THIS LINE!!    
-
-    //Horizontal Collision
-    if (place_meeting(x+hsp,y,oSolid)) {
-        //while(!place_meeting(x+sign(hsp),y,oSolid)) {
-        //    x += sign(hsp);
-        //}
-        
-        hsp = 0;
-    }
-    
-    
-    //Vertical Collision
-    if (place_meeting(x,y+vsp,oSolid)) {
-        //while(!place_meeting(x,y+sign(vsp),oSolid)) {
-        //    y += sign(vsp);
-        //}
-        
-        vsp = 0;
-    }
-        
-    //Apply speeds and such
-    
-    x += hsp * global.time
-    y += vsp * global.time
-
-    
-
-//animation stuff
-
-//point me the right direction!
-if sign(hsp) != 0 { image_xscale = sign(hsp) }
-
-if hsp &gt; .2 or hsp &lt; -.2
-{
-    if vsp == 0 //and sprite_index != spr_player_death {
-    {
-        sprite_index = spr_player_run
-    }
-} else {
-    if vsp == 0 //and sprite_index != spr_player_death
-    {
-    sprite_index = spr_player_idle
-    }
-}
-if vsp &lt; 0
-{
-    sprite_index = spr_player_up
-}
-if vsp &gt; 0 
-{
-    sprite_index = spr_player_down
-}
-
-//health stuff
-var spike;
-spike = instance_place(x,y,oSpikes)
-if instance_exists(spike) { if spike.state != false { HP -= 1 } }
-
-if HP &lt;= 0 {
-    repeat(200) {
-        with (instance_create(x,y,oBlood)) {
-            s = true
-            dir = random(360)
-            spd = random(5)
-            hsp = lengthdir_x(spd,dir)
-            vsp = lengthdir_y(spd,dir)
-            image_blend = make_colour_rgb(random_range(151,255),80,79) //181
-            image_alpha = random_range(.6,1.5)
-            if image_alpha &gt; 1 { image_alpha = 1 }
-        }
-    }
-    instance_destroy()
-}
-//terminal velocitys
-if abs(hsp) &gt; 5 { hsp = 5 * sign(hsp) }
-if abs(vsp) &gt; 10 { vsp = 10 * sign(vsp) }
-
-
- 
-</string>
-          </argument>
-        </arguments>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -421,35 +74,12 @@ up = keyboard_check_pressed(ord('W')) + keyboard_check_pressed(vk_space) + keybo
 left = keyboard_check(ord('A')) + keyboard_check(vk_left)
 right = keyboard_check(ord('D')) + keyboard_check(vk_right)
 
-
-//vomiting
-if mouse_check_button(mb_left) and App {
-    
-    //knockback yo
-    motion_add_cus(global.Grav * .75,point_direction(x,y,mouse_x,mouse_y)+180)
-    
-    
-    repeat(ceil(random_range(2,7))) {
-            with (instance_create(x,y,oBlood)) {
-                dir = point_direction(x,y,mouse_x,mouse_y) + random_range(-3,3)
-                spd = random_range(4,6)
-                hsp = lengthdir_x(spd,dir)
-                vsp = lengthdir_y(spd,dir)
-                
-                image_blend = make_colour_rgb(random_range(90,120),random_range(151,255),79) //181
-                
-                image_alpha = random_range(.6,1.5)
-                if image_alpha &gt; 1 { image_alpha = 1 }
-            }
-        }
-    
-}
-
 //jumping
 
-if up and place_meeting(x,y + 2,oSolid) 
+if up and place_meeting(x,y + 2,oSolid) and jumps &lt;= ojumps and jumps &gt; 0
 { 
-    vsp = -JumpSpeed 
+    vsp = -JumpSpeed
+    jumps -= 1
 }
 
 //autojump when you land on something
@@ -478,6 +108,24 @@ if App { //this makes sure everything works the same even if time is slowed
             hsp = hsp *.95
         }
     }
+}
+
+//wall sliding
+if place_meeting(x+1,y,oSolid) and sign(vsp) = 1 {
+    if up and jumps &lt;= ojumps and jumps &gt; 0{
+        vsp = -JumpSpeed
+        jumps -= 1
+        hsp = -Speed * 2
+    }
+vsp = vsp * .65 
+}
+if place_meeting(x-1,y,oSolid) and sign(vsp) = 1 {
+    if up and jumps &lt;= ojumps and jumps &gt; 0{
+        vsp = -JumpSpeed
+        jumps -= 1
+        hsp = Speed * 2
+    }
+vsp = vsp * .65 
 }
 
 //terminal velocity(s)  (These prevent things from getting too crazy)
@@ -598,8 +246,9 @@ if global.debug {
     draw_set_colour(c_orange);
     //stomping on things mask
     draw_rectangle(x-5,y+1,x+3,y+5,true)
-}
-
+}   
+    draw_set_colour(c_purple)
+    draw_text(mouse_x,mouse_y,string(jumps))
 </string>
           </argument>
         </arguments>
